@@ -10,16 +10,9 @@ a {
 
 
 
-
-
-
-
-
-
 // ریسپانسیو سازی سایت
 
 header {
-    // background-color: rgb(173, 70, 70);
     width: 1200px;
     margin: 0 auto;
 
@@ -46,17 +39,15 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
-    z-index: 100;
+
+
+
     @media (max-width: 992px) {
         flex-direction: column;
         width: 100%;
     }
 
-    background-color: aqua;
-
     .img-logo {
-        // background-color: red;
         width: 180px;
         margin: 20px 10px;
 
@@ -69,15 +60,6 @@ header {
             padding: 10px;
         }
 
-        img {
-            width: 180px;
-            height: auto;
-
-            @media (max-width: 1000px) {
-                width: 140px;
-            }
-        }
-
         .burger {
             display: none;
 
@@ -88,127 +70,36 @@ header {
     }
 
     .navbar {
-        // background-color: rgb(55, 55, 201);
         margin-right: 10px;
         font-size: 15px;
         line-height: 40px;
-        // overflow: hidden;
 
         @media (max-width: 993px) {
             width: 100%;
             margin-right: 0;
         }
-
         .menu {
-            list-style-type: none;
-            width: 100%;
-            height: 100%;
-            position: relative;
-            overflow: hidden;
-            text-align: center;
-            text-align: center;
-            padding: 0;
-            margin: 0;
-
             @media (max-width: 992px) {
                 display: none;
             }
-
-            // background-color: yellow;
-
+    
             @media (max-width: 992px) {
                 margin: 0 auto;
                 width: 100%;
                 background-color: rgb(112, 133, 133);
             }
-
-            &-item {
-                display: inline-block;
-                margin: 0 10px;
-                position: relative;
-                z-index: 1;
-                text-align: center;
-                // background-color: aqua;
-
-                @media (max-width: 992px) {
-                    display: block;
-                    text-align: center;
-                    margin-left: 0;
-                    margin-right: 0;
-                    width: 100% !important;
-
-                }
-
-                &:nth-child(1) {
-                    width: 90px;
-                }
-
-                &:nth-child(2) {
-                    width: 180px;
-                }
-
-                &:nth-child(3) {
-                    width: 100px;
-                }
-
-                &:nth-child(4) {
-                    width: 100px;
-                }
-
-                &:nth-child(5) {
-                    width: 150px;
-                }
-
-                &:nth-child(2):hover~.animation {
-                    left: 115px;
-                    width: 200px;
-                }
-
-                &:nth-child(3):hover~.animation {
-                    left: 335px;
-                    width: 90px;
-                }
-
-                &:nth-child(4):hover~.animation {
-                    left: 445px;
-                    width: 110px;
-                }
-
-                &:nth-child(5):hover~.animation {
-                    left: 575px;
-                    width: 155px;
-                }
-            }
-
-            &-link {
-                display: block;
-                font-weight: 600;
-                font-size: 1em;
-                letter-spacing: .8px;
-                color: black;
-            }
-
-            .animation {
-                position: absolute;
-                height: 100%;
-                top: 0;
-                z-index: 0;
-                background-color: rgb(115, 11, 212);
-                border-radius: 8px;
-                transition: all .5s;
-
-                @media (max-width: 992px) {
-                    opacity: 0;
-                }
-            }
-
-            .start-home,
-            li:nth-child(1):hover~.animation {
-                width: 90px;
-                left: 10px;
-            }
-
         }
+
+        .menu-item {
+            @media (max-width: 992px) {
+                display: block;
+                text-align: center;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100% !important;
+            }
+        }
+
     }
 }
 
@@ -218,11 +109,9 @@ header {
 
 
 .photos {
-    // background-color: yellow;
     width: 100%;
     display: flex;
     flex-direction: column;
-
 
     .row-top {
         display: flex;
@@ -268,6 +157,7 @@ header {
         margin-top: 10px;
         width: 100%;
         display: flex;
+        height: 14vw;
 
         @media (max-width: 576px) {
             flex-direction: column;
@@ -276,10 +166,12 @@ header {
             .top-photo {
                 width: 100% !important;
                 height: 40vh !important;
+
                 &:nth-child(2) {
                     margin: 0 !important;
                     margin-top: 10px !important;
                 }
+
                 &:nth-child(3) {
                     margin: 0 !important;
                     margin-top: 10px !important;
@@ -287,12 +179,9 @@ header {
             }
         }
 
-        // background-color: aquamarine;
-        height: 14vw;
 
         .top-photo {
             position: relative;
-            // background-color: aqua;
             width: 33%;
             height: 100%;
 
@@ -302,3 +191,79 @@ header {
         }
     }
 }
+
+.container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 30px;
+
+    @media (max-width: 992px) {
+        flex-direction: column;
+
+        .left-part {
+            width: 100% !important;
+        }
+
+        .right-part {
+            width: 100% !important;
+        }
+
+        .photo-mining-left {
+            margin-right: 0px !important;
+        }
+
+        .photo-mining-right {
+            margin-left: 0px !important;
+            margin-right: 0 !important;
+        }
+    }
+
+    .left-part {
+        width: 65%;
+
+        .crypto-mining {
+            width: 100%;
+
+            .flex-layout {
+                display: flex;
+                justify-content: space-around;
+                margin-top: 40px;
+
+                @media (max-width: 992px) {
+                    flex-direction: column;
+                }
+
+                .photo-mining-left {
+                    margin-right: 15px;
+                }
+
+                .photo-mining-right {
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+            }
+
+        }
+
+    }
+
+    .right-part {
+        width: 30%;
+
+        .popular-stores {
+            width: 100%;
+        }
+
+        .post {
+            display: flex;
+            align-items: center;
+        }
+    }
+}
+
+
+
+
+
+
