@@ -8,11 +8,15 @@ a {
     text-decoration: none;
 }
 
+.clear-fix {
+    clear: both;
+}
 
 
 // ریسپانسیو سازی سایت
 
-header {
+header,
+.footer {
     width: 1200px;
     margin: 0 auto;
 
@@ -40,8 +44,6 @@ header {
     justify-content: space-between;
     align-items: center;
 
-
-
     @media (max-width: 992px) {
         flex-direction: column;
         width: 100%;
@@ -62,10 +64,13 @@ header {
 
         .burger {
             display: none;
+            border: none;
+            background-color: transparent;
 
             @media (max-width: 992px) {
                 display: inline-block;
             }
+
         }
     }
 
@@ -78,11 +83,12 @@ header {
             width: 100%;
             margin-right: 0;
         }
+
         .menu {
             @media (max-width: 992px) {
                 display: none;
             }
-    
+
             @media (max-width: 992px) {
                 margin: 0 auto;
                 width: 100%;
@@ -263,7 +269,34 @@ header {
 }
 
 
+footer {
+    @media (max-width: 576px) {
+        .footer-sotial-media {
+            justify-content: center !important;
+        }
 
+        .footer-menu {
+            justify-content: center !important;
+        }
 
+        .row-top {
+            flex-direction: column;
+        }
 
+        .column,
+        cloumn-left {
+            width: 60% !important;
+        }
+    }
 
+    .row-top {
+        display: flex;
+        padding-top: 30px;
+        width: 100%;
+        font-size: 20px;
+    }
+
+    .row-bottom {
+        width: 100%;
+    }
+}
